@@ -8,5 +8,10 @@ test('Greets renders correctly', () => {
     render(<Greet />)
     const textElement = screen.getByText('Hello')
     expect(textElement).toBeInTheDocument()
+})
 
+test('Greet renders correctly with a name', () => {
+    render(<Greet name={"John"}/>)
+    const textElement = screen.getByText('Hello John')
+    expect(textElement).toBeInTheDocument()
 })

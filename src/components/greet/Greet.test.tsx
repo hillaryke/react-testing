@@ -7,5 +7,6 @@ import { Greet } from './Greet';
 test('Greets renders correctly', () => {
     render(<Greet />)
     const textElement = screen.getByText('Hello')
+    expect(textElement).toBeInTheDocument()
 
-}, 5000)
+})
